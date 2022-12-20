@@ -1,0 +1,5 @@
+RegisterCommand("911", function(source, args, rawCommand)
+    local playerName = GetPlayerName(source)
+    local message = table.concat(args, " ")
+    TriggerClientEvent("chat:addMessage", -1, { args = { "^1[911] " .. playerName, message }, color = { 255, 0, 0 } })
+end, false)
